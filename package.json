@@ -1,0 +1,22 @@
+{
+  "name": "jae-node-command-line-add",
+  "version": "1.0.0",
+  "description": "Jae's branch about add-command",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/future-tech-learning-team/node-command-line-add.git"
+  },
+  "author": "jae",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/future-tech-learning-team/node-command-line-add/issues"
+  },
+  "homepage": "https://github.com/future-tech-learning-team/node-command-line-add#readme",
+  "dependencies": {
+    "minimist": "^1.2.0"
+  }
+}
