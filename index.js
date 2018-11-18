@@ -5,9 +5,7 @@ var fs = require('fs-extra');
 var path = require('path');
 var cwd = process.cwd();
 
-module.exports = {
-  add: addFile,
-};
+module.exports = addFile
 
 function addFile(argv) {
   var fileName = argv.file || 'file.md';
