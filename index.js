@@ -5,7 +5,6 @@ var fs = require('fs-extra');
 var path = require('path');
 var cwd = process.cwd();
 
-var core = require('shiyj-node-command-line');
 
 function addFile(argv) {
   var fileName = argv.file || 'file.md';
@@ -23,13 +22,13 @@ function addFile(argv) {
 
 function appendFile(filePath, content) {
   console.log('开始编辑文件：', filePath, content)
-  fs.readFile(filePath, 'utf8', function(err, data){
+  fs.readFile(filePath, 'utf8', function (err, data) {
     if (err) {
       return console.error(err);
     }
     const text = data + content;
 
-    fs.outputFile(filePath, text,function(err, data){
+    fs.outputFile(filePath, text, function (err, data) {
       if (err) {
         return console.error(err);
       }
@@ -70,12 +69,11 @@ function moveFile(source, tag) {
     console.log('成功移动文件!');
   })
 }
-if(core.registeCommand) {
-  core.registeCommand({
-    add: addFile,
-    append: appendFile,
-    rename: renameFile,
-    remove: removeFile,
-    move: moveFile
-  })
+
+module.exports = {
+  add: addFile,
+  append: appendFile,
+  rename: renameFile,
+  remove: removeFile,
+  moveTo: moveFile
 }

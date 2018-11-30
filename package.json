@@ -1,6 +1,6 @@
 {
   "name": "shiyj-node-command-line-add",
-  "version": "1.0.1",
+  "version": "1.0.6",
   "description": "node-command-line-training-add",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -8,7 +8,10 @@
     "syjLink": "npm link",
     "syjView": "npm view shiyj-node-command-line",
     "syjGlobPath": "npm prefix -g",
-    "syjNpmRemove": "npm unpublish shiyj-node-command-line --force"
+    "syjNpmRemove": "npm unpublish shiyj-node-command-line --force",
+    "registePlugin": "node ./script.js",
+    "postinstall": "npm run registePlugin",
+    "postversion": "npm run registePlugin"
   },
   "repository": {
     "type": "git",
